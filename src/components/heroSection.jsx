@@ -1,4 +1,4 @@
-export default function HeroSection() {
+export default function HeroSection({ onNavigate }) {
   return (
     <section className="min-h-screen flex flex-col justify-center items-center text-center px-4 bg-gradient-to-b">
       <section>
@@ -15,19 +15,25 @@ export default function HeroSection() {
       </p>
 
       <div className="flex flex-wrap justify-center gap-6 buttons mb-20">
-        <button className="px-8 py-3 bg-black text-white rounded-full hover:bg-gray-800 transition">
+        <button 
+          onClick={() => onNavigate('projects')}
+          className="px-8 py-3 bg-black text-cyan-300 rounded-full border-2 border-cyan-500/50 hover:border-cyan-400 hover:bg-black/80 transition-all hover:shadow-[0_0_20px_rgba(34,211,238,0.6)] hover:scale-105 font-bold"
+        >
           PROJECTS
         </button>
-        <button className="px-8 py-3 border-2 border-black rounded-full hover:bg-gray-100 transition">
+        <button 
+          onClick={() => onNavigate('about')}
+          className="px-8 py-3 bg-black text-magenta-300 rounded-full border-2 border-magenta-500/50 hover:border-magenta-400 hover:bg-black/80 transition-all hover:shadow-[0_0_20px_rgba(236,72,153,0.6)] hover:scale-105 font-bold"
+        >
           ABOUT 
         </button>
-        <button className="px-8 py-3 border-2 border-black rounded-full hover:bg-gray-100 transition">
+        <button 
+          onClick={() => onNavigate('contact')}
+          className="px-8 py-3 bg-black text-yellow-300 rounded-full border-2 border-yellow-500/50 hover:border-yellow-400 hover:bg-black/80 transition-all hover:shadow-[0_0_20px_rgba(234,179,8,0.6)] hover:scale-105 font-bold"
+        >
           CONTACT
         </button>
       </div>
-      <button class="btn">
-        <div class="scroll"> </div>
-      </button>
     </section>
   );
 }
