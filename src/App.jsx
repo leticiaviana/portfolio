@@ -3,10 +3,37 @@ import HeroSection from "./components/heroSection";
 import AboutSection from "./components/AboutSection";
 import ProjectsSection from "./components/projectSection";
 import ContactSection from "./components/contactSection";
+import { useSEO } from "./hooks/useSEO";
 
 export default function App() {
   const [activeSection, setActiveSection] = useState("hero");
   const [isTransitioning, setIsTransitioning] = useState(false);
+
+  // SEO dinâmico baseado na seção ativa
+  const seoContent = {
+    hero: {
+      title: "Home - Desenvolvedora Full Stack",
+      description: "Bem-vindo ao portfolio de Letícia Viana - Desenvolvedora Full Stack especializada em criar experiências web modernas e interativas.",
+      keywords: "desenvolvedor web, full stack, React, JavaScript, portfolio"
+    },
+    about: {
+      title: "Sobre Mim - Habilidades e Experiência",
+      description: "Conheça mais sobre Letícia Viana, suas habilidades técnicas, experiência profissional e stack de tecnologias.",
+      keywords: "sobre, habilidades, experiência, stack, tecnologias"
+    },
+    projects: {
+      title: "Projetos - Portfolio de Trabalhos",
+      description: "Confira os projetos desenvolvidos por Letícia Viana, incluindo aplicações web, APIs e soluções inovadoras.",
+      keywords: "projetos, portfolio, aplicações web, desenvolvimento"
+    },
+    contact: {
+      title: "Contato - Vamos Trabalhar Juntos",
+      description: "Entre em contato com Letícia Viana para discutir projetos, oportunidades de trabalho ou colaborações.",
+      keywords: "contato, email, linkedin, trabalho, colaboração"
+    }
+  };
+
+  useSEO(seoContent[activeSection]);
 
   const navigateToSection = (section) => {
     if (section === activeSection) return;
