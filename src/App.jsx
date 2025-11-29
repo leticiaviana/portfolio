@@ -9,27 +9,27 @@ export default function App() {
   const [activeSection, setActiveSection] = useState("hero");
   const [isTransitioning, setIsTransitioning] = useState(false);
 
-  // SEO dinâmico baseado na seção ativa
+  // Dynamic SEO based on active section
   const seoContent = {
     hero: {
-      title: "Home - Desenvolvedora Full Stack",
-      description: "Bem-vindo ao portfolio de Letícia Viana - Desenvolvedora Full Stack especializada em criar experiências web modernas e interativas.",
-      keywords: "desenvolvedor web, full stack, React, JavaScript, portfolio"
+      title: "Home - Full Stack Developer",
+      description: "Welcome to Letícia Viana's portfolio - Full Stack Developer specialized in creating modern and interactive web experiences.",
+      keywords: "web developer, full stack, React, JavaScript, portfolio"
     },
     about: {
-      title: "Sobre Mim - Habilidades e Experiência",
-      description: "Conheça mais sobre Letícia Viana, suas habilidades técnicas, experiência profissional e stack de tecnologias.",
-      keywords: "sobre, habilidades, experiência, stack, tecnologias"
+      title: "About Me - Skills and Experience",
+      description: "Learn more about Letícia Viana, her technical skills, professional experience and technology stack.",
+      keywords: "about, skills, experience, stack, technologies"
     },
     projects: {
-      title: "Projetos - Portfolio de Trabalhos",
-      description: "Confira os projetos desenvolvidos por Letícia Viana, incluindo aplicações web, APIs e soluções inovadoras.",
-      keywords: "projetos, portfolio, aplicações web, desenvolvimento"
+      title: "Projects - Work Portfolio",
+      description: "Check out projects developed by Letícia Viana, including web applications, APIs and innovative solutions.",
+      keywords: "projects, portfolio, web applications, development"
     },
     contact: {
-      title: "Contato - Vamos Trabalhar Juntos",
-      description: "Entre em contato com Letícia Viana para discutir projetos, oportunidades de trabalho ou colaborações.",
-      keywords: "contato, email, linkedin, trabalho, colaboração"
+      title: "Contact - Let's Work Together",
+      description: "Get in touch with Letícia Viana to discuss projects, job opportunities or collaborations.",
+      keywords: "contact, email, linkedin, work, collaboration"
     }
   };
 
